@@ -1,16 +1,42 @@
-## About Laravel
+## About Jokes App
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+In this laravel single page challenge 3 random jokes are showing in the form of table which are fetching from third party API's on click of refresh button jokes will be refresh without loading the page first need to enter the password which allows you to access the jokes page. In this no Database is used not storing any details in database and not fetching any details from database its simple one page application which is used to fetch data from the third party api mentioned in challenge ( https://official-joke-api.appspot.com/jokes/programming/ten/ )
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Screenshot 1 :  Password Enter
+Enter the Password (latus) then it will proceed further if password will be incorrect it will give error.
+![image](https://github.com/user-attachments/assets/8f6fbb97-d437-4196-bba6-7286746344cf)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Screenshot 2 :  Jokes Display
+You can see 3 random jokes are showing and on click of refresh button all jokes will be shuffled and show random jokes.
+![image](https://github.com/user-attachments/assets/84280730-d354-4c32-b38b-79f50d1db84d)
+
+
+
+## Setup of this app
+
+1: Run git clone '[link projer github](https://github.com/Pavneetkaur1995/latus.git)' All the updated code is on master branch.
+2: Run composer install
+3: Run cp .env.example .env or copy .env.example .env
+After creating PHP file please add following things into your .env file
+If you already have database lines please replace with following
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=
+DB_USERNAME=
+DB_PASSWORD=
+
+no database is used in this so
+
+4: Run php artisan key:generate
+5: Run php artisan migrate
+
+Run php artisan db:seed
+
+Run php artisan serve
+
+
 
 ## Learning Laravel
 
