@@ -12,72 +12,30 @@ You can see 3 random jokes are showing and on click of refresh button all jokes 
 
 
 
-## Setup of this app
+## Setup of this Laravel jokes app
 
 1: Run git clone '[link projer github](https://github.com/Pavneetkaur1995/latus.git)' All the updated code is on master branch.
 2: Run composer install
 3: Run cp .env.example .env or copy .env.example .env
-After creating PHP file please add following things into your .env file
-If you already have database lines please replace with following
-
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=
-DB_USERNAME=
-DB_PASSWORD=
-
-no database is used in this so
-
 4: Run php artisan key:generate
-5: Run php artisan migrate
+5: Run php artisan serve
 
-Run php artisan db:seed
+## Demo Video link
+https://www.loom.com/share/b5ac262f7666439a8dee64b8a97adc35?sid=f9972838-6de5-4a72-a785-da7a440933bb
 
-Run php artisan serve
+## Unit Testing and Code Reviews Scenarios which I have done on my end
+
+1: First of all laravel have inbuilt phpunit which is used to test the basics like is the routes working fine is the response returning. It has two folders inside the tests which is default folder that is unit and feature.
+2:Following are the commands which I used to make or run the tests
+
+ php artisan test --filter=JokesRouteCheckTest
+ php artisan test --filter=JokesApiTest
+
+Currently I made above tests which used to test the routes and check is API working or not.
+
+3: Except Laravel phpunit test function I had review the code of all the controllers and view files which does not contain any unused commented code or any othe not usable code
 
 
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
